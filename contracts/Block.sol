@@ -43,6 +43,11 @@ contract Block is ReentrancyGuard {
         }
     }
 
+    // return members
+    function getMembers() external view returns (Recepients[] memory) {
+        return members;
+    }
+
     //specify the share of user
     function addMember(uint256 share, address payable _address)
         external
